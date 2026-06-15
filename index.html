@@ -16,15 +16,20 @@
     <h2>Meu primeiro post</h2>
     <p>Por: Rafael</p>
     <p>Boas vindas ao meu blog, aqui vou compartilhar dicas com você!</p>
-    <button>❤ <span>0</span></button>
+    <button>👍<span>0</span></button>
+    <button>👎<span>0</span></button>
+    <button>😐<span>0</span></button>
   </main> 
 </body>
 <script>
-  const botao = document.querySelector("button");
+  const botoes = document.querySelectorAll("button");
+    botoes. forEach(function(botao){
   botao.addEventListener("click", botaoClicado);
   function botaoClicado(){
     let texto = botao.querySelector("span");
     texto.textContent++;
-  }
+    }
+ 
+  })
 </script>
 </html>
